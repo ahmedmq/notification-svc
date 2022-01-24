@@ -12,9 +12,9 @@ import lombok.ToString;
 // @Getter, @Setter, @RequiredArgsConstructor. @ToSring, @EqualsAndHashcode
 public class Recipient {
 
-	private String accountId;
-	private String name;
-	private LocalDateTime createAt;
+	private final String accountId;
+	private final String name;
+	private final LocalDateTime createAt;
 
 
 
