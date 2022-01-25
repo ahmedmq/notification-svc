@@ -4,9 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class TransactionNotificationDto {
-	private Long transactionId;
+public class TransactionDto {
+    Long transactionId;
+    BigDecimal amount;
 }
