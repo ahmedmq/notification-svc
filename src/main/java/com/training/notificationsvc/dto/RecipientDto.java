@@ -6,7 +6,8 @@ import lombok.Data;
 
 @Data
 public class RecipientDto {
-	private String accountId;
-	private String name;
-	private LocalDateTime createAt;
+	private final String id;
+	private final String name;
+	private final String createAt;
+
 }
