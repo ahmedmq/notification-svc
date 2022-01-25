@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.junit5.WireMockRuntimeInfo;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
+import com.training.notificationsvc.domain.TransactionType;
 import com.training.notificationsvc.dto.TransactionDto;
 import com.training.notificationsvc.dto.TransactionNotificationDto;
 import org.assertj.core.api.Assertions;
@@ -31,7 +32,7 @@ public class WireMockDemoTest {
     @Test
     void testWireMockServer(WireMockRuntimeInfo wireMockRuntimeInfo) throws JsonProcessingException {
 
-        TransactionDto transactionDto = new TransactionDto(1L, BigDecimal.TEN);
+        TransactionDto transactionDto = new TransactionDto(1L, TransactionType.DEPOSIT,"ACC1234567",BigDecimal.valueOf(99),BigDecimal.valueOf(100),"Token Amount","2022-01-01T01:01:01");
 
         ObjectMapper objectMapper = new ObjectMapper();
 

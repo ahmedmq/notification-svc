@@ -1,4 +1,9 @@
 {
   "transactionId": 9999,
-  "amount": 99
+  "amount": 99,
+  "accountId": "ACC1234567",
+  "transactionType": "DEPOSIT",
+  "description": "Token Amount",
+  "balance": 100,
+  "createAt": "2022-01-01T01:01"
 }
