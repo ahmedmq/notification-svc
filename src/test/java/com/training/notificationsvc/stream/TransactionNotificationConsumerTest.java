@@ -26,7 +26,7 @@ public class TransactionNotificationConsumerTest {
 
 		TransactionNotificationDto transactionNotificationDto = new TransactionNotificationDto(123456L);
 		consumer.accept(MessageBuilder.withPayload(transactionNotificationDto).build());
-		Assertions.assertThat(capturedOutput.getOut()).isEqualTo("Received Transaction notification with id [123456]");
+		Assertions.assertThat(capturedOutput.getOut()).contains("Received Transaction notification with id [123456]");
 
 		ArgumentCaptor<Long> argumentCaptor = ArgumentCaptor.forClass(Long.class);
 		Mockito.verify(accountServiceClient).getTransaction(argumentCaptor.capture());

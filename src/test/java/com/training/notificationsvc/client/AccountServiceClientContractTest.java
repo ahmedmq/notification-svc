@@ -6,6 +6,7 @@ import com.github.tomakehurst.wiremock.junit5.WireMockExtension;
 import com.training.notificationsvc.domain.TransactionType;
 import com.training.notificationsvc.dto.TransactionDto;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Disabled
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = "spring.mongodb.embedded.version=4.0.12")
 @AutoConfigureStubRunner(
         ids = "com.trainingdemo:account-svc:+:stubs:8082",

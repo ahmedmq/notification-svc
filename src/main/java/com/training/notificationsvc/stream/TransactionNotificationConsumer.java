@@ -26,7 +26,7 @@ public class TransactionNotificationConsumer implements Consumer<Message<Transac
 		// Fieng accountServiceClient.getTraction - TransactionDTO
 		TransactionDto transactionDto = accountServiceClient.getTransaction(transactionNotificationDto.getTransactionId());
 
-		System.out.println(transactionDto);
+		System.out.println("Recieved from Account Client"+transactionDto);
 		// SMTP to send via email
 
 	}
