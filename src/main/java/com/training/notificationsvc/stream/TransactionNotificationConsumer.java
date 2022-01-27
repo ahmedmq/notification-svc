@@ -28,6 +28,8 @@ public class TransactionNotificationConsumer implements Consumer<Message<Transac
 
 		System.out.println("Recieved from Account Client"+transactionDto);
 		// SMTP to send via email
+		// spring-boot-starter-email
+		//JavaMailSender.send(to,subject,text)
 
 	}
 }
