@@ -44,7 +44,5 @@ public class AccountServiceClientContractTest {
         assertThat(transactionDto.getAccountId()).isEqualTo("ACC1234567");
         assertThat(transactionDto.getDescription()).isEqualTo("Token Amount");
         assertThat(transactionDto.getCreateAt()).isEqualTo("2022-01-01T01:01:01");
-
-
     }
 }
